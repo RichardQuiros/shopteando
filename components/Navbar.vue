@@ -43,7 +43,7 @@
             </svg>
           </span>
           <span class="ml-2 text-white font-medium">
-            Shoptendo
+            Shopteando
           </span>
         </a>
         <div
