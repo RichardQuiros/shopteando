@@ -13,6 +13,7 @@ export default {
       lang: "en",
     },
     meta: [
+      { name: "google-site-verification" , content: process.env.GOOGLE_VERIFICATION || ""},
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
