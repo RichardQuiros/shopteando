@@ -214,7 +214,7 @@ export default {
           val = val + Number(item.price);
         });
       if (this.$store.state.mystore.cart.includes(69)) {
-        val = val + 69.69;
+        val = val + 299.99;
       }
       return val.toFixed(2);
     },
