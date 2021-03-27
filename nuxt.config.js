@@ -68,12 +68,15 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
+    "@nuxtjs/google-analytics"
   ],
+  googleAnalytics:{
+    id: 'G-6TK0TLBTH2'
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: ["@nuxtjs/sitemap"],
   sitemap: {
-    generate: true,
     hostname: "https://template-shoptenado-nuxtjs.netlify.app",
   },
 

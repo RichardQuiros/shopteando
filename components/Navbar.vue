@@ -101,22 +101,11 @@ PANAMA <span class="cursor font-black text-xl">_</span>
         <div>
           <a
             @click="bowser = !bowser"
-            class="cursor-pointer w-1/2 text-gray-700 font-medium text-sm rounded-md flex fill-current  hover:text-white sm:hover:text-red-600   border-b-4 border-transparent hover:border-white sm:hover:border-red-600  transition duration-150 ease-in-out"
+            class="cursor-pointer text-gray-700 font-medium text-sm rounded-md leading-5 hover:text-white sm:hover:text-red-600 sm:hover:border-red-600  border-b-4 border-transparent hover:border-white  transition duration-150 ease-in-out"
 	    style="min-width:48px;min-height:48px;"
           >
             Bowser
-            <svg
-              class="ml-2"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
-              />
-            </svg>
-            <div
+          <div
               v-if="bowser"
               @mouseleave="bowser = false"
               class="absolute mt-8  bg-white shadow-lg"
