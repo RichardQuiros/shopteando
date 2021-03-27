@@ -72,7 +72,7 @@
           <hr />
           <div class="grid grid-colums-2 p-4">
             <span class="text-red-600 font-black text-large">Shopteando</span>It
-            is a template of an example store inspired by a nintento store<span
+            is a template of an example store inspired by a nintendo store<span
               >developed by</span
             ><span class="text-center overflow-auto">
               <div
@@ -177,8 +177,8 @@ PANAMA <span class="cursor font-black text-xl">_</span>
               v-if="this.$store.state.mystore.cart.includes(69)"
               class="p-2 flex  justify-between"
             >
-              <span>Nintento Switch</span
-              ><span class="text-red-600">$69.69</span>
+              <span>Nintendo Switch</span
+              ><span class="text-red-600">$299.99</span>
             </div>
             <hr />
             <div class="p-2 flex text-white bg-red-600 justify-between">

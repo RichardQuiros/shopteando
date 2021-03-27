@@ -5,7 +5,7 @@
     <div
       class="text-6xl font-bold text-gray-800 h-0 p-5 row-start-2 md:row-start-1 h-auto"
     >
-      Nintento Switch
+      Nintendo Switch
       <div class="text-base text-gray-600 grid grid-cols-1 h-1">
         <span class="text-xl" lang="en"
           >Better battery,clearer screen, and even more fun.</span
@@ -33,7 +33,7 @@
     <img
       class="img row-start-1 m-auto"
       src="~/assets/img/consolaSwich.png"
-      alt="nintento switch"
+      alt="nintendo switch"
       style="filter: saturate(1.5);"
       width="300px"
       height="300px"

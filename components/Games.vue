@@ -46,7 +46,7 @@
       >
         <img
           class="rounded-3xl shadow-lg object-cover"
-          :alt="`Nintento games ${item.name}`"
+          :alt="`Nintendo games ${item.name}`"
           :src="getImage(item)"
         />
         <svg

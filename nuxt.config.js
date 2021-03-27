@@ -23,7 +23,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "It is a template of an example store inspired by a nintento store developed by Code Solution Panamá.",
+          "It is a template of an example store inspired by a nintendo store developed by Code Solution Panamá.",
       },
 
       { hid: "og:type", content: "website" },
@@ -35,7 +35,7 @@ export default {
       {
         hid: "og:description",
         content:
-          "It is a template of an example store inspired by a nintento store developed by Code Solution Panamá.",
+          "It is a template of an example store inspired by a nintendo store developed by Code Solution Panamá.",
       },
       { hid: "og:image", content: `${baseUrl}/Shoptenado.png` },
 
@@ -48,7 +48,7 @@ export default {
       {
         hid: "twitter:description",
         content:
-          "It is a template of an example store inspired by a nintento store developed by Code Solution Panamá.",
+          "It is a template of an example store inspired by a nintendo store developed by Code Solution Panamá.",
       },
       { hid: "twitter:image", content: `${baseUrl}/Shoptenado.png` },
     ],
