@@ -1,4 +1,14 @@
-# shopteando
+# Shopteando template 🎉🥳
+
+Shopteando
+It is a template of an example store inspired by a nintento store
+developed by CSP - code solution Panamá
+
+![](https://i.imgur.com/lNgvdY4.png)
+
+>🔗Web site
+>[https://template-shoptenado-nuxtjs.netlify.app/](https://)
+
 
 ## Build Setup
 

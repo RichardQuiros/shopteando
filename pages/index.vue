@@ -1,15 +1,34 @@
 <template>
-  <div class="container mx-auto" style="max-width:100%">
-    <ShapeCir style="position:absolute;overflow:hidden;max-width:100%" baseSize="40rem" posY="-57rem" posX="60%"/>
-
-    <NavNitento class="z-10" style="max-width:100%"/>   
-    
-    <BanSwitch class="transform scale-90 mt-20 " style="max-width:100%" />
-    <SlideGameNintento class="transform scale-90 " style="max-width:100%"/>
-
-
+  <div class="pb-20">
+    <Banner class="w-full md:mt-20"/>
+    <Games class="px-10 w-full"/>
   </div>
 </template>
+
+<style>
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+::-webkit-resizer{
+  height:50px;
+}
+</style>
 
 <script>
 export default {

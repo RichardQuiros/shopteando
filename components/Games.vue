@@ -1,14 +1,13 @@
 <template>
-  <div class="slide">
-    <div class="font-bold text-gray-800 mb-4">
+  <div v-if="menuGames" class="slide h-auto relative">
+    <div class="font-bold text-gray-800 mb-4" style="width:fit-content">
       <a @click="filterMenu = !filterMenu" class="flex cursor-pointer">
         Featured Games
         <svg
           class="fill-current text-red-700"
-          style="transform: scale(0.6, 0.6)"
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="17"
+          height="17"
           viewBox="0 0 24 24"
         >
           <path d="M1 0h22l-9 15.094v8.906l-4-3v-5.906z" />
@@ -20,10 +19,10 @@
       @mouseleave="filterMenu = false"
       @mouseover="filterMenu = true"
       v-if="filterMenu"
-      class="fixed p-5 inset-y-0 bg-white shadow-lg mr-2 mt-10 v-24 w-64 z-10 grid"
+      class="absolute p-5 inset-y-0 bg-white shadow-lg mr-2 mt-10 v-24 w-64 z-10 grid"
     >
       <span
-        @click="reloadPage()"
+        @click="returnAll()"
         class="font-black border rounded-md p-2 border-gray-600 text-gray-600 hover:border-red-700 hover:bg-red-700 hover:text-white cursor-pointer uppercase my-2 text-center"
         >ALL</span
       >
@@ -45,10 +44,10 @@
         v-for="(item, key) in gamesFilter"
         :key="key"
       >
-        <img class="rounded-3xl shadow-lg" :src="getImage(item)" />
+        <img class="rounded-3xl shadow-lg object-cover" :alt="`Nintento games ${item.name}`" :src="getImage(item)" />
         <svg
           v-if="$store.state.mystore.cart.includes(item.id)"
-          class="absolute inset-0"
+          class="absolute inset-0" 
           xmlns="http://www.w3.org/2000/svg"
           width="74"
           height="74"
@@ -93,6 +92,7 @@ export default {
   components: { VueSlickCarousel },
   data() {
     return {
+      menuGames: true,
       filterMenu: false,
       cart: this.$store.state.mystore.cart,
       setting: {
@@ -124,11 +124,11 @@ export default {
             },
           },
           {
-            breakpoint: 700,
+            breakpoint: 770,
             settings: {
               slidesToShow: 2,
               centerPadding: '0px',
-              centerMode: false,
+              centerMode: true,
             },
           },
         ],
@@ -145,8 +145,13 @@ export default {
         return item.state == filt
       })
     },
-    reloadPage() {
-      window.location.reload()
+    returnAll(){
+      this.menuGames = false
+      let state = this.gamesFilter[0].state
+      this.gamesFilter = this.gamesFilter.concat(this.$store.state.mystore.games.filter((item) => {
+        return item.state != state
+      }))
+      setTimeout(()=>this.menuGames = true,100)
     },
     add_game(id) {
       this.$store.commit('mystore/addCart', id)
@@ -165,29 +170,11 @@ img {
   outline: none;
 }
 
-.slide {
-  -webkit-animation: fade 4.5s forwards;
-  -moz-animation: fade 4.5s forwards;
-  animation: fade 4.5s forwards;
-}
 
-@-webkit-keyframes fade {
-  0% {
-    opacity: 0%;
-  }
 
-  100% {
-    opacity: 100%;
-  }
-}
-
-@keyframes fade {
-  0% {
-    opacity: 0%;
-  }
-
-  100% {
-    opacity: 100%;
+@media screen and (max-width:380px){
+  .slide{
+    margin-top:80px;
   }
 }
 </style>
