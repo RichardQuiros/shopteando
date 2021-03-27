@@ -44,10 +44,14 @@
         v-for="(item, key) in gamesFilter"
         :key="key"
       >
-        <img class="rounded-3xl shadow-lg object-cover" :alt="`Nintento games ${item.name}`" :src="getImage(item)" />
+        <img
+          class="rounded-3xl shadow-lg object-cover"
+          :alt="`Nintento games ${item.name}`"
+          :src="getImage(item)"
+        />
         <svg
           v-if="$store.state.mystore.cart.includes(item.id)"
-          class="absolute inset-0" 
+          class="absolute inset-0"
           xmlns="http://www.w3.org/2000/svg"
           width="74"
           height="74"
@@ -80,15 +84,15 @@
     </VueSlickCarousel>
   </div>
 </template>
- 
+
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
 // optional style for arrows & dots
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
-  name: 'carousel',
+  name: "carousel",
   components: { VueSlickCarousel },
   data() {
     return {
@@ -97,7 +101,7 @@ export default {
       cart: this.$store.state.mystore.cart,
       setting: {
         slidesToShow: 4,
-        centerPadding: '20px',
+        centerPadding: "20px",
         arrows: true,
         infinite: true,
         autoplay: true,
@@ -113,52 +117,54 @@ export default {
             breakpoint: 1324,
             settings: {
               slidesToShow: 3,
-              centerPadding: '40px',
+              centerPadding: "40px",
             },
           },
           {
             breakpoint: 1000,
             settings: {
               slidesToShow: 2,
-              centerPadding: '20px',
+              centerPadding: "20px",
             },
           },
           {
             breakpoint: 770,
             settings: {
               slidesToShow: 2,
-              centerPadding: '0px',
+              centerPadding: "0px",
               centerMode: true,
             },
           },
         ],
       },
       gamesFilter: this.$store.state.mystore.games,
-    }
+    };
   },
   methods: {
     getImage(item) {
-      return require(`~/assets/img/${item.img}`)
+      return require(`~/assets/img/${item.img}`);
     },
     filterGames(filt) {
       this.gamesFilter = this.$store.state.mystore.games.filter((item) => {
-        return item.state == filt
-      })
+        return item.state == filt;
+      });
     },
-    returnAll(){
-      this.menuGames = false
-      let state = this.gamesFilter[0].state
-      this.gamesFilter = this.gamesFilter.concat(this.$store.state.mystore.games.filter((item) => {
-        return item.state != state
-      }))
-      setTimeout(()=>this.menuGames = true,100)
+    returnAll() {
+      this.menuGames = false;
+      let state = this.gamesFilter[0].state;
+      this.gamesFilter = this.gamesFilter.concat(
+        this.$store.state.mystore.games.filter((item) => {
+          return item.state != state;
+        })
+      );
+      setTimeout(() => (this.menuGames = true), 100);
     },
     add_game(id) {
-      this.$store.commit('mystore/addCart', id)
-      document.cookie = String(this.$store.state.mystore.cart)
+      this.$store.commit("mystore/addCart", id);
+      document.cookie = String(this.$store.state.mystore.cart);
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -170,11 +176,9 @@ img {
   outline: none;
 }
 
-
-
-@media screen and (max-width:380px){
-  .slide{
-    margin-top:80px;
+@media screen and (max-width: 380px) {
+  .slide {
+    margin-top: 80px;
   }
 }
 </style>

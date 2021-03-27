@@ -1,7 +1,7 @@
 <template>
-  <div class="pb-20">
-    <Banner class="w-full md:mt-20"/>
-    <Games class="px-10 w-full"/>
+  <div lang="en" class="pb-20">
+    <Banner class="w-full md:mt-20" />
+    <Games class="px-10 w-full" />
   </div>
 </template>
 
@@ -25,8 +25,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-::-webkit-resizer{
-  height:50px;
+::-webkit-resizer {
+  height: 50px;
 }
 </style>
 
@@ -34,15 +34,12 @@
 export default {
   data() {
     return {
-      cookie: ''
-    }
+      cookie: "",
+    };
   },
   created() {
-    this.cookie = document.cookie
-    console.log(this.cookie)
+    this.cookie = document.cookie;
+    console.log(this.cookie);
   },
-}
+};
 </script>
-
-
-

@@ -7,7 +7,7 @@
     >
       Nintento Switch
       <div class="text-base text-gray-600 grid grid-cols-1 h-1">
-        <span class="text-xl "
+        <span class="text-xl" lang="en"
           >Better battery,clearer screen, and even more fun.</span
         >
         <div class="flex my-4">
@@ -15,6 +15,7 @@
             class=""
             src="~/assets/img/start.svg"
             width="100px"
+	    height="100px"
             alt="calification"
           />(5367) reviews
         </div>
@@ -34,21 +35,23 @@
       src="~/assets/img/consolaSwich.png"
       alt="nintento switch"
       style="filter: saturate(1.5);"
-      width="300"
+      width="300px"
+      height="300px"
     />
   </div>
 </template>
 
 <script>
 export default {
-  data(){
-    return{
+  data() {
+    return {
       jsonLd: {
-  "@context": "https://schema.org/", 
-  "@type": "Product", 
-  "name": "Nintendo Switch",
-  "image": "https://www.nintendo.com/content/dam/noa/en_US/images/switch/split-cta-system.png",
-  "description": `Get the gaming system that lets you play the games you want, wherever you are, however you like.
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        name: "Nintendo Switch",
+        image:
+          "https://www.nintendo.com/content/dam/noa/en_US/images/switch/split-cta-system.png",
+        description: `Get the gaming system that lets you play the games you want, wherever you are, however you like.
 
 Includes the Nintendo Switch console and Nintendo Switch dock in black, with contrasting left and right Joy‑Con controllers—one red, one blue. Also includes all the extras you need to get started.
 
@@ -57,50 +60,52 @@ Model number: HAC-001(-01) (product serial number begins with “XKW”)
 This model includes battery life of approximately 4.5 - 9 hours*.
 
 *The battery life will depend on the games you play. For instance, the battery will last approximately 5.5 hours for The Legend of Zelda: Breath of the Wild.`,
-  "brand": "Nintendo",
-  "gtin13": "0 045496 590086",
-  "sku": "110477",
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.nintendo.com/switch/buy-now/",
-    "priceCurrency": "USD",
-    "price": "299.99",
-    "priceValidUntil": "2021-03-26",
-    "availability": "https://schema.org/InStock",
-    "itemCondition": "https://schema.org/NewCondition"
+        brand: "Nintendo",
+        gtin13: "0 045496 590086",
+        sku: "110477",
+        offers: {
+          "@type": "Offer",
+          url: "https://www.nintendo.com/switch/buy-now/",
+          priceCurrency: "USD",
+          price: "299.99",
+          priceValidUntil: "2021-03-26",
+          availability: "https://schema.org/InStock",
+          itemCondition: "https://schema.org/NewCondition",
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4",
+          bestRating: "4",
+          worstRating: "3",
+          ratingCount: "1",
+          reviewCount: "1",
+        },
+        review: {
+          "@type": "Review",
+          name: "Richard J",
+          reviewBody: "It is an amazing console and also very compact.",
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: "4",
+            bestRating: "4",
+            worstRating: "3",
+          },
+          datePublished: "2020-11-10",
+          author: { "@type": "Person", name: "Richard" },
+          publisher: { "@type": "Organization", name: "Richard" },
+        },
+      },
+    };
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4",
-    "bestRating": "4",
-    "worstRating": "3",
-    "ratingCount": "1",
-    "reviewCount": "1"
-  },
-  "review": {
-    "@type": "Review",
-    "name": "Richard J",
-    "reviewBody": "It is an amazing console and also very compact.",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4",
-      "bestRating": "4",
-      "worstRating": "3"
-    },
-    "datePublished": "2020-11-10",
-    "author": {"@type": "Person", "name": "Richard"},
-    "publisher": {"@type": "Organization", "name": "Richard"}
-  }
-}
-    }
-  },
-  head(){
-    return{
-    script:[{
-      type: 'application/ld+json',
-      json:this.jsonLd
-    }]
-    }
+  head() {
+    return {
+      script: [
+        {
+          type: "application/ld+json",
+          json: this.jsonLd,
+        },
+      ],
+    };
   },
   methods: {
     add_one() {

@@ -1,7 +1,8 @@
 <template>
   <div class="container h-screen relative max-w-7xl m-auto overflow-x-hidden">
+<a class="skip-link" href="#main">Skip to main</a>
     <Navbar class="relative z-10" style="max-width:100%" />
-    <Nuxt />
+    <Nuxt id="main" />
     <a
       class="text-center fixed bottom-0 container max-w-7xl w-full text-white font-bold p-2 block bg-red-600"
       href="mailto:anytec2020@gmail.com?subject=Hi%20CSP%20&Body=I have seen your work and I would like to contact you"
@@ -74,12 +75,29 @@ html {
   color: #fff;
   background-color: #35495e;
 }
-.slick-next{
-  background:#e53e3e !important;
-  border-radius:50% !important;
+.slick-next {
+  background: #e53e3e !important;
+  border-radius: 50% !important;
 }
-.slick-prev{
-  background:#e53e3e !important;
-  border-radius:50% !important;
+.slick-prev {
+  background: #e53e3e !important;
+  border-radius: 50% !important;
+}
+.a {
+  min-width: 48px;
+  min-height: 48px;
+}
+.skip-link {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 </style>

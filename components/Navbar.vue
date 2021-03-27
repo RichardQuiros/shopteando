@@ -11,6 +11,7 @@
         <a
           @click="shopteando = !shopteando"
           class="cursor-pointer flex w-16 items-center transform hover:scale-125 transition duration-150 ease-in-out"
+	  style="min-width:48px;min-height:48px;"
         >
           <span>
             <svg
@@ -101,6 +102,7 @@ PANAMA <span class="cursor font-black text-xl">_</span>
           <a
             @click="bowser = !bowser"
             class="cursor-pointer w-1/2 text-gray-700 font-medium text-sm rounded-md flex fill-current  hover:text-white sm:hover:text-red-600   border-b-4 border-transparent hover:border-white sm:hover:border-red-600  transition duration-150 ease-in-out"
+	    style="min-width:48px;min-height:48px;"
           >
             Bowser
             <svg
@@ -321,5 +323,9 @@ export default {
   70% {
     opacity: 100%;
   }
+}
+a{
+  min-width:48px;
+  min-height:48px;
 }
 </style>
