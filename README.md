@@ -7,7 +7,7 @@ developed by CSP - code solution Panamá
 ![](https://i.imgur.com/lNgvdY4.png)
 
 >🔗Web site
->[https://template-shoptenado-nuxtjs.netlify.app/](https://)
+>[https://template-shoptenado-nuxtjs.netlify.app/](https://template-shopteando-nuxtjs.netlify.app/)
 
 
 ## Build Setup
